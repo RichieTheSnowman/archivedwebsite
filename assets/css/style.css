@@ -1,4 +1,5 @@
 body {
+  margin: 0;
 	color: rgb(255, 255, 255);
 	font-family: 'Saira Semi Condensed', sans-serif;
 	-webkit-touch-callout: none;
@@ -55,6 +56,7 @@ body {
     padding-bottom: 2px;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
+    border-radius: 0 0 3px 3px;
   }
   
   .js-count-particles{
@@ -70,7 +72,56 @@ body {
     border-radius: 3px 3px 0 0;
     overflow: hidden;
   }
+
+  .wrapper {
+    padding: 10px;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .wrapper .item {
+    visibility: hidden;
+    display: none;
+  }
+  .wrapper h2 {
+    font-size: 50px;
+    margin: 0;
+    color: #3a3a3a;
+    text-align: left;
+  }
+  .wrapper > div {
+    min-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    color: rgb(162, 0, 255);
+  }
+  .wrapper > div:after {
+    content: "";
+    width: 10px;
+    height: 4px;
+    display: block;
+    background: black;
+    color: rgb(162, 0, 255);
+    margin-bottom: 4px;
+    margin-left: 2px;
+    animation-duration: 350ms;
+    animation-name: fade;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
   
-  .count-particles{
-    border-radius: 0 0 3px 3px;
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
