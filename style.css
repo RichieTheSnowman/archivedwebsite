@@ -20,6 +20,11 @@ body {
 	text-align: center;
 	vertical-align: middle;
 }
+
+ canvas {
+    display: block;
+    vertical-align: bottom;
+  }
   
   /* ---- particles.js container ---- */
   
